@@ -13,7 +13,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      #有効なユーザーのときの処理
+      flash[:success] = "Welcome to the Sample App!"
+      redirect_to @user
     else
+      #無効なユーザーのときの処理
       render 'new'
     end
   end
