@@ -9,3 +9,7 @@
   #email: MyString
 
 #チュートリアルには削除と書いてあるが一応コメントアウトで残す
+michael:
+  name: Michael Example
+  email: michael@example.com
+  password_digest: <%= User.digest('password') %>
