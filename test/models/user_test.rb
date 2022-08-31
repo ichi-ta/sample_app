@@ -55,7 +55,7 @@ class UserTest < ActiveSupport::TestCase
 
   #パスワードの最小文字数
   test "password should be present (nonbrank)" do
-    @user.password = @user.password_confirmation =" " * 6
+    @user.password = @user.password_confirmation = " " * 6
     assert_not @user.valid?
   end
 
